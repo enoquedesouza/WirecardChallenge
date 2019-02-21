@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "fa8747f7-b6e3-4b1b-90af-da84a8cc524c",
+		"name": "WirecardPaymentAPIChallenge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/confirmar?id=1&nome=Enoque Almeida de Souza&email=enoquedesouza@yahoo.com.br&cpf=37936340866&nomecartao=Fernando A. Pessoa&numerocartao=5109 2443 2600 3442&cvv=672&validadecartao=11/2022&valor=200&tipopagamento=cartao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/confirmar?id=1&nome=Enoque Almeida de Souza&email=enoquedesouza@yahoo.com.br&cpf=37936340866&nomecartao=Fernando A. Pessoa&numerocartao=5109 2443 2600 3442&cvv=672&validadecartao=2022/11&valor=200&tipopagamento=cartao",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"confirmar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "nome",
+							"value": "Enoque Almeida de Souza"
+						},
+						{
+							"key": "email",
+							"value": "enoquedesouza@yahoo.com.br"
+						},
+						{
+							"key": "cpf",
+							"value": "37936340866"
+						},
+						{
+							"key": "nomecartao",
+							"value": "Fernando A. Pessoa"
+						},
+						{
+							"key": "numerocartao",
+							"value": "5109 2443 2600 3442"
+						},
+						{
+							"key": "cvv",
+							"value": "672"
+						},
+						{
+							"key": "validadecartao",
+							"value": "2022/11"
+						},
+						{
+							"key": "valor",
+							"value": "200"
+						},
+						{
+							"key": "tipopagamento",
+							"value": "cartao"
+						}
+					]
+				},
+				"description": "Uma solicitação de realização de pagamento com os dados corretos. O retorno deve se um resumeo das informações da venda sem mensagens de erro."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/confirmar?id=1&nome=Enoque Almeida de Souza&email=enoquedesouza@yahoo.com.br&cpf=37936340866&nomecartao=&numerocartao=&cvv=672&validadecartao=11/2022&valor=200&tipopagamento=cartao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/confirmar?id=1&nome=Enoque Almeida de Souza&email=enoquedesouza@yahoo.com.br&cpf=37936340866&nomecartao=&numerocartao=&cvv=&validadecartao=&valor=200&tipopagamento=boleto",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"confirmar"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "nome",
+							"value": "Enoque Almeida de Souza"
+						},
+						{
+							"key": "email",
+							"value": "enoquedesouza@yahoo.com.br"
+						},
+						{
+							"key": "cpf",
+							"value": "37936340866"
+						},
+						{
+							"key": "nomecartao",
+							"value": ""
+						},
+						{
+							"key": "numerocartao",
+							"value": ""
+						},
+						{
+							"key": "cvv",
+							"value": ""
+						},
+						{
+							"key": "validadecartao",
+							"value": ""
+						},
+						{
+							"key": "valor",
+							"value": "200"
+						},
+						{
+							"key": "tipopagamento",
+							"value": "boleto"
+						}
+					]
+				},
+				"description": "Pagamento via boleto."
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/confirmar?id=1&nome=Enoque Almeida de Souza&email=enoquedesouza@yahoo.com.br&cpf=37936340866&nomecartao=&numerocartao=&cvv=672&validadecartao=11/2022&valor=200&tipopagamento=cartao",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/confirmar?id=1&nome=Enoque Almeida de Souza&email=enoquedesouza@yahoo.com.br&cpf=37936340866&nomecartao=&numerocartao=&cvv=&validadecartao=&valor=200&tipopagamento=boleto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"confirmar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								},
+								{
+									"key": "nome",
+									"value": "Enoque Almeida de Souza"
+								},
+								{
+									"key": "email",
+									"value": "enoquedesouza@yahoo.com.br"
+								},
+								{
+									"key": "cpf",
+									"value": "37936340866"
+								},
+								{
+									"key": "nomecartao",
+									"value": ""
+								},
+								{
+									"key": "numerocartao",
+									"value": ""
+								},
+								{
+									"key": "cvv",
+									"value": ""
+								},
+								{
+									"key": "validadecartao",
+									"value": ""
+								},
+								{
+									"key": "valor",
+									"value": "200"
+								},
+								{
+									"key": "tipopagamento",
+									"value": "boleto"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json;charset=UTF-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Feb 2019 15:10:09 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"infoPagamento\": \"001905009420144816063050094317578110000020000\",\n    \"venda\": {\n        \"status\": \"Aguardando pagamento\",\n        \"data\": \"2019-02-21\",\n        \"comprador\": {\n            \"nome\": \"Enoque Almeida de Souza\",\n            \"cpf\": \"37936340866\",\n            \"email\": \"enoquedesouza@yahoo.com.br\",\n            \"venda\": null,\n            \"id\": null\n        },\n        \"pagamento\": {\n            \"tipo\": 2,\n            \"status\": \"Pendente\",\n            \"valorMeio\": null,\n            \"valor\": 200,\n            \"venda\": null,\n            \"cartao\": null,\n            \"id\": null\n        },\n        \"id\": null\n    }\n}"
+				}
+			]
+		}
+	]
+}
