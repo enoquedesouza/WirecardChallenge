@@ -9,3 +9,5 @@ Para o teste pode-se rodar a aplicação que aceitará requisições através da
 Para simular as transações via cartão de crédito foi criada uma base de dados com três cartões, dois válidos e um bloqueado. Um objeto StatusVenda é retorna como um JSON apresentando um resumo dos dados da compra que está sendo realizada. Não foi desenvovida uma página para a apresentação des resumo. Mas a integração pode ser feita facilmente utilizando as tecnologias de desenvolvimento frontend.
 O arquivo paymentAPI é a base de dados do projeto. O banco de dados utilizado foi o PostgreSQL, para acessá-lo basta fazer um restore no banco com as seguintes informações:
 host "localhost" --port "5432" --username "postgres" --no-password --verbose --role "postgres" --format=t --blobs --encoding "UTF8" "paymentAPI"
+
+O foco foi do desenvolvimento foi o funcionamento da aplicação, por isso, validações de campos e de algumas variáveis não foram feitas da maneira apropriada.
