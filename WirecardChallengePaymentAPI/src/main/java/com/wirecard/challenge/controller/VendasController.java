@@ -94,13 +94,10 @@ public class VendasController {
 	
 	@PostMapping(value = "/confirmar")
 	public StatusVenda adicionaConta(@RequestParam String id, @RequestParam String nome, 
-								  @RequestParam String email, @RequestParam String cpf, 
-								  @RequestParam(required=false) String nomecartao, 
-								  @RequestParam(required=false) String numerocartao, 
-								  @RequestParam(required=false) String cvv,   
-								  @RequestParam(required=false) String validadecartao,  
-								  @RequestParam(required=false) String valor,
-								  @RequestParam(required=false) String tipopagamento) {
+					 @RequestParam String email, @RequestParam String cpf, 
+					 @RequestParam String nomecartao, @RequestParam String numerocartao, 
+					 @RequestParam String cvv, @RequestParam String validadecartao,  
+					 @RequestParam String valor, @RequestParam String tipopagamento, Model model) {
 		
 		
 			//Informações de quem está realizando a compra
@@ -155,6 +152,7 @@ public class VendasController {
 			//pgR.save(pg);
 			//cpR.save(cp);
 			
+			model.addAttribute("svd", statusVenda);
 			return statusVenda;
 
 		
