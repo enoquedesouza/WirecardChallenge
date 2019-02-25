@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+	
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/open-iconic-bootstrap.css">
+		<title>Resposta</title>
+	
+	</head>
+	
+	<body>
+	
+		<header class = "container jumbotron">
+		</header>
+		<div class = "container">
+		
+			<div class = "row">
+				<div class = "col-md-4">
+				</div>
+				<div class = "col-md-4">
+				
+						<div class="card-header">
+							<h3>Informações do Pagamento</h3>
+						</div>
+						<div class="card-body" >
+
+							<dl th:each="sv : ${svd}">
+							
+								<dt>Nome</dt>
+								<dd th:text="${sv.getVenda().getComprador().getNome()}"></dd>
+								<dt>CPF</dt>
+								<dd th:text="${sv.getVenda().getComprador().getCpf()}"></dd>
+								<dt>E-mail</dt>
+								<dd th:text="${sv.getVenda().getComprador().getEmail()}"></dd>
+								<dt>Valor</dt>
+								<dd th:text="${sv.getVenda().getPagamento().getValor()}"></dd>
+								<dt>Meio de Pagamento</dt>
+								<dd th:text="${sv.getVenda().getPagamento().getValorMeio()}"></dd>
+							</dl>
+							<!-------- fim do corpo do dl -->
+						</div>
+						<!------- fim do corpo do card -->
+					</div>
+					<!------ Fim do card -->
+				
+				</div>
+				<div class = "col-md-4">
+				</div>
+			</div>
+		
+		</div>
+		
+		<footer class = "container jumbotron">
+		
+		</footer>
+		
+	
+	</body>
+
+
+</html>
